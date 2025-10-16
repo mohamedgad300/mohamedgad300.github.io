@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mohamed Ashraf Gad | Data Analyst Portfolio</title>
+  <link rel="icon" href="your-photo.jpg" type="image/jpg">
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background-color: #0f172a;
+      color: #e2e8f0;
+      line-height: 1.6;
+      scroll-behavior: smooth;
+    }
+    header {
+      text-align: center;
+      padding: 60px 20px;
+      background: linear-gradient(180deg, #1e293b, #0f172a);
+    }
+    header img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      border: 3px solid #38bdf8;
+      object-fit: cover;
+      margin-bottom: 20px;
+    }
+    header h1 {
+      font-size: 2.2rem;
+      margin-bottom: 10px;
+      color: #38bdf8;
+    }
+    header p {
+      font-size: 1rem;
+      color: #cbd5e1;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    section {
+      max-width: 1100px;
+      margin: 50px auto;
+      padding: 0 20px;
+    }
+    h2 {
+      color: #38bdf8;
+      border-bottom: 2px solid #38bdf8;
+      display: inline-block;
+      margin-bottom: 20px;
+    }
+
+    /* Skills Section */
+    .skills-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+    .skill-card {
+      background: #1e293b;
+      border-radius: 10px;
+      padding: 20px;
+      flex: 1 1 250px;
+      transition: transform 0.2s;
+    }
+    .skill-card:hover {
+      transform: translateY(-4px);
+    }
+    .skill-card h3 {
+      color: #7dd3fc;
+      margin-bottom: 10px;
+    }
+    .skill-card ul {
+      margin: 0;
+      padding-left: 20px;
+      color: #cbd5e1;
+    }
+
+    /* Projects */
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+    .card {
+      background: #1e293b;
+      border-radius: 10px;
+      padding: 20px;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+    }
+    .card h3 {
+      margin-top: 0;
+      color: #38bdf8;
+    }
+    .card p {
+      font-size: 0.95rem;
+      color: #cbd5e1;
+    }
+    .card a {
+      text-decoration: none;
+      color: #7dd3fc;
+      font-weight: 500;
+    }
+
+    /* Contact */
+    .contact-info {
+      background: #1e293b;
+      border-radius: 10px;
+      padding: 30px;
+      text-align: center;
+      max-width: 600px;
+      margin: 40px auto;
+    }
+    .contact-info h3 {
+      color: #38bdf8;
+      margin-bottom: 20px;
+    }
+    .contact-info a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      color: #e2e8f0;
+      background: #334155;
+      padding: 10px 18px;
+      border-radius: 8px;
+      margin: 5px;
+      text-decoration: none;
+      transition: 0.3s;
+      font-weight: 500;
+    }
+    .contact-info a:hover {
+      background: #38bdf8;
+      color: #0f172a;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9rem;
+      color: #94a3b8;
+      border-top: 1px solid #1e293b;
+      margin-top: 50px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <img src="https://media.licdn.com/dms/image/v2/D4D03AQHnfycC3Zfinw/profile-displayphoto-crop_800_800/B4DZmrA.jCGQAM-/0/1759510788662?e=1763596800&v=beta&t=rKC4FFoA7nTid9ncHL6GwfjXwaehrMnQ1a8vcNcM_AI" 
+     alt="Mohamed Ashraf Gad" 
+     style="width:160px; height:160px; border-radius:50%; object-fit:cover; border:3px solid #38bdf8; margin-bottom:15px;">
+
+    <h1>Mohamed Ashraf Gad</h1>
+    <p>Data Analyst | Transforming Data into Actionable Insights 📊  
+       Skilled in Python, Power BI, and SQL — Turning raw data into meaningful stories.</p>
+  </header>
+
+  <!-- About -->
+  <section id="about">
+    <h2>🧠 About Me</h2>
+    <p>I'm a passionate <strong>Data Analyst</strong> who loves finding insights hidden within data.  
+       With hands-on experience in <strong>Power BI, Python (Pandas, Plotly), and SQL</strong>, I create dashboards and visualizations that empower business decisions.  
+       I believe data should not just inform, but inspire. 🚀</p>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills">
+    <h2>⚙️ My Skills</h2>
+    <div class="skills-container">
+      <div class="skill-card">
+        <h3>Technical Skills</h3>
+        <ul>
+          <li>Power BI, Excel Dashboarding</li>
+          <li>Python (Pandas, Matplotlib, Plotly)</li>
+          <li>SQL & Database Querying</li>
+          <li>Data Cleaning & Transformation</li>
+          <li>Statistical Analysis & Visualization</li>
+        </ul>
+      </div>
+      <div class="skill-card">
+        <h3>Soft Skills</h3>
+        <ul>
+          <li>Analytical Thinking & Problem Solving</li>
+          <li>Attention to Detail</li>
+          <li>Communication & Presentation</li>
+          <li>Team Collaboration</li>
+          <li>Continuous Learning</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects">
+    <h2>📊 Featured Projects</h2>
+    <div class="projects">
+      <div class="card">
+        <h3>🏥 Hospital Performance Dashboard</h3>
+        <p>A Power BI dashboard analyzing hospital KPIs — patient flow, satisfaction, and department efficiency. Helps management make data-driven decisions.</p>
+        <a href="https://github.com/mohamedgad300/Hospital-Analyze-Dashboard" target="_blank">🔗 View Project</a>
+      </div>
+
+      <div class="card">
+        <h3>🍽️ Restaurant Dashboard Analyze</h3>
+        <p>Interactive dashboard visualizing restaurant sales, top products, and profit trends using Python and Plotly for deep insights.</p>
+        <a href="https://github.com/mohamedgad300/Restaurant-Dashboard-Analyze" target="_blank">🔗 View Project</a>
+      </div>
+
+      <div class="card">
+        <h3>🏢 ACC Real Estate Dashboard</h3>
+        <p>Power BI analytics dashboard for real estate data — focuses on property performance, revenue tracking, and market insights.</p>
+        <a href="https://github.com/mohamedgad300/ACC-Real-Estate-Dashboard" target="_blank">🔗 View Project</a>
+      </div>
+
+      <div class="card">
+        <h3>🏦 Egyptian Bank Analysis</h3>
+        <p>Bank performance analysis dashboard using Power BI — includes customer segmentation, KPIs, and credit trend visualizations.</p>
+        <a href="https://github.com/mohamedgad300/Egyptian-Bank" target="_blank">🔗 View Project</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact">
+    <h2>📫 Connect With Me</h2>
+    <div class="contact-info">
+      <h3>Let's Stay Connected!</h3>
+      <a href="https://www.linkedin.com/in/mohammed-ashraf-749015226/" target="_blank">💼 LinkedIn</a>
+      <a href="https://github.com/mohamedgad300" target="_blank">🐙 GitHub</a>
+      <a href="mailto:mohamedashrwf@gmail.com">📧 Email</a>
+      <a href="https://wa.me/201096454566" target="_blank">💬 WhatsApp</a>
+      <a href="tel:+201096454566">📞 Call Me</a>
+      <a href="https://www.instagram.com/mga8d/?hl=ar" target="_blank">📸 Instagram</a>
+    </div>
+  </section>
+
+  <footer>
+    © 2025 Mohamed Ashraf Gad | Data Analyst Portfolio
+  </footer>
+</body>
+</html>
