@@ -1,223 +1,148 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Mohamed Ashraf Gad — Data Analyst Portfolio</title>
-  <meta name="description" content="Mohamed Ashraf Gad | Data Analyst skilled in Python, Power BI, and SQL. Turning data into actionable insights." />
-  <link rel="icon" href="https://media.licdn.com/dms/image/v2/D4D03AQHnfycC3Zfinw/profile-displayphoto-crop_800_800/B4DZmrA.jCGQAM-/0/1759510788662?e=1763596800&v=beta&t=rKC4FFoA7nTid9ncHL6GwfjXwaehrMnQ1a8vcNcM_AI">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Mohamed Ashraf Gad — Data Analyst</title>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Pacifico&display=swap" rel="stylesheet">
+
   <style>
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
     body {
-      font-family: 'Poppins', sans-serif;
       margin: 0;
+      font-family: 'Poppins', system-ui, Arial, sans-serif;
       background: #0f172a;
       color: #e2e8f0;
-      scroll-behavior: smooth;
-      transition: background 0.4s, color 0.4s;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      line-height: 1.6;
     }
 
-    /* 🌙 NAVBAR */
+    /* NAVBAR */
     .navbar {
-      display: flex;
-      justify-content: center;
-      background: rgba(15, 23, 42, 0.85);
-      backdrop-filter: blur(8px);
       position: sticky;
       top: 0;
-      z-index: 1000;
-      padding: 10px 0;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+      z-index: 50;
+      backdrop-filter: blur(6px);
+      background: rgba(6,10,15,0.55);
+      border-bottom: 1px solid rgba(255,255,255,0.03);
     }
-
     .nav-wrap {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      width: 90%;
-      max-width: 1050px;
+      max-width: 1100px; margin: 0 auto; display:flex; align-items:center;
+      justify-content:space-between; padding:12px 18px;
     }
-
     .logo {
-      display: flex;
-      align-items: center;
-      text-decoration: none;
-      color: #38bdf8;
-      font-weight: 600;
-      font-size: 20px;
+      display:flex; align-items:center; gap:10px; text-decoration:none; color: #e2e8f0;
     }
-
     .logo-badge {
-      background: #38bdf8;
-      color: #0f172a;
-      border-radius: 8px;
-      padding: 4px 8px;
-      font-weight: bold;
-      margin-right: 8px;
+      width:42px; height:42px; display:flex; align-items:center; justify-content:center;
+      border-radius:8px; background: linear-gradient(135deg,#38bdf8,#7dd3fc);
+      color:#021224; font-weight:700; font-family: 'Pacifico', cursive; font-size:20px;
+      box-shadow: 0 6px 20px rgba(56,189,248,0.12);
     }
-
+    .logo-text {
+      font-weight:700; font-size:18px; letter-spacing:0.2px;
+    }
+    .nav-links {
+      display:flex; gap:14px; align-items:center;
+    }
     .nav-links a {
-      text-decoration: none;
-      color: #e2e8f0;
-      margin: 0 10px;
-      transition: 0.3s;
-      font-size: 15px;
+      color:#cfefff; text-decoration:none; padding:8px 10px; border-radius:8px; font-weight:600;
+      transition: background .18s, color .18s, transform .12s;
     }
+    .nav-links a:hover { background: rgba(125,211,252,0.09); color:#7dd3fc; transform:translateY(-2px); }
 
-    .nav-links a:hover {
-      color: #38bdf8;
-    }
+    /* Mobile menu button */
+    .menu-btn { display:none; background:transparent; border:0; color:#e2e8f0; font-size:20px; }
 
-    /* 🌗 زر تبديل الوضع */
-    .theme-toggle {
-      background: none;
-      border: none;
-      cursor: pointer;
-      font-size: 22px;
-      margin-left: 12px;
-      color: #38bdf8;
-      transition: transform 0.3s ease;
-    }
+    /* Layout wrapper */
+    .wrap { max-width:1100px; margin:0 auto; padding:18px; }
 
-    .theme-toggle:hover {
-      transform: rotate(25deg);
-    }
-
-    /* 🌞 الوضع الفاتح */
-    body.light-mode {
-      background: #f8fafc;
-      color: #0f172a;
-    }
-
-    body.light-mode .navbar {
-      background: rgba(255,255,255,0.9);
-      border-bottom: 1px solid rgba(0,0,0,0.1);
-    }
-
-    body.light-mode .nav-links a {
-      color: #0f172a;
-    }
-
-    body.light-mode .nav-links a:hover {
-      color: #0284c7;
-    }
-
-    /* HEADER */
+    /* Header */
     header {
-      text-align: center;
-      padding: 60px 20px;
-      background: linear-gradient(180deg, #1e293b, #0f172a);
+      text-align:center; padding:42px 18px; margin-top:12px;
+      background: linear-gradient(180deg,#0b1220,#0f172a);
+      border-radius:12px;
     }
+    .profile-img {
+      width:220px; height:220px; border-radius:50%; object-fit:cover; border:4px solid #38bdf8;
+      box-shadow:0 14px 40px rgba(56,189,248,0.10); display:block; margin:0 auto 18px;
+    }
+    header h1 { margin:6px 0 6px; font-size:2rem; color:#38bdf8; }
+    header p { margin:0 auto; max-width:760px; color:#cbd5e1; font-size:1rem; }
 
-    header img {
-      width: 200px;
-      height: 200px;
-      border-radius: 50%;
-      object-fit: cover;
-      border: 4px solid #38bdf8;
-      margin-bottom: 20px;
-    }
-
-    header h1 {
-      font-size: 28px;
-      color: #38bdf8;
-    }
-
-    header p {
-      max-width: 600px;
-      margin: 10px auto;
-      font-size: 15px;
-      color: #cbd5e1;
-    }
-
-    /* SECTIONS */
-    section {
-      padding: 60px 20px;
-      max-width: 1050px;
-      margin: auto;
-    }
+    section { margin:34px 0; }
 
     h2 {
-      color: #38bdf8;
-      text-align: center;
-      font-size: 24px;
-      margin-bottom: 20px;
+      display:inline-block; color:#38bdf8; border-bottom:2px solid #38bdf8;
+      padding-bottom:6px; margin-bottom:18px; font-size:1.05rem;
     }
 
-    /* ABOUT */
-    #about p {
-      text-align: center;
-      max-width: 800px;
-      margin: auto;
-      color: #cbd5e1;
+    /* Skills */
+    .skills {
+      display:flex; gap:18px; flex-wrap:wrap;
     }
+    .skill-card {
+      background:#0b1220; padding:18px; border-radius:10px; flex:1 1 300px;
+      box-shadow:0 6px 18px rgba(2,6,23,0.6);
+    }
+    .skill-card h3 { color:#7dd3fc; margin:0 0 8px; }
+    .skill-card ul { margin:0; padding-left:18px; color:#cbd5e1; }
 
-    /* PROJECTS */
+    /* Projects */
     .projects {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 25px;
+      display:grid; grid-template-columns: repeat(auto-fit,minmax(260px,1fr)); gap:20px;
+      margin-top:12px;
     }
-
-    .card {
-      background: #1e293b;
-      border-radius: 15px;
-      padding: 20px;
-      box-shadow: 0 6px 20px rgba(0,0,0,0.2);
-      transition: transform 0.3s ease;
-      text-align: center;
+    .project {
+      background: linear-gradient(180deg,#0d1724,#0f1b2a); border-radius:12px; overflow:hidden;
+      transition:transform .28s ease, box-shadow .28s ease; display:flex; flex-direction:column;
     }
+    .project:hover { transform:translateY(-8px); box-shadow:0 18px 40px rgba(2,6,23,0.6); }
+    .project-thumb { width:100%; height:170px; object-fit:cover; display:block; transition:transform .4s ease; }
+    .project:hover .project-thumb { transform:scale(1.05); }
+    .project-body { padding:16px; display:flex; flex-direction:column; flex:1; }
+    .project h3 { margin:0 0 8px; color:#7dd3fc; font-size:1.05rem; }
+    .project p { margin:0 0 12px; color:#cbd5e1; font-size:.95rem; flex:1; }
+    .project a.button { display:inline-block; margin-top:auto; text-decoration:none; background:#38bdf8; color:#071226; padding:8px 12px; border-radius:8px; font-weight:700; }
+    .project a.button:hover { background:#7dd3fc; }
 
-    .card:hover {
-      transform: translateY(-6px);
+    /* Contact */
+    .contact {
+      background:#0d1724; padding:18px; border-radius:12px; text-align:center;
+      display:flex; gap:12px; align-items:center; justify-content:center; flex-wrap:wrap;
     }
-
-    .card img {
-      width: 100%;
-      border-radius: 10px;
-      margin-bottom: 10px;
-      object-fit: cover;
+    .contact a {
+      display:inline-flex; gap:8px; align-items:center; padding:10px 14px; background:#0f2430; color:#e6eef8;
+      border-radius:10px; text-decoration:none; font-weight:700; transition:all .18s ease;
     }
+    .contact a:hover { background:#38bdf8; color:#071226; transform:translateY(-3px); }
 
-    .card a {
-      text-decoration: none;
-      color: #38bdf8;
-      font-weight: 500;
+    footer { text-align:center; color:#94a3b8; font-size:.92rem; margin:36px 0 12px; }
+
+    /* Responsive */
+    @media (max-width:900px) {
+      .nav-links { display:none; }
+      .menu-btn { display:inline-block; }
     }
-
-    /* CONTACT */
-    .contact-info {
-      text-align: center;
-      font-size: 16px;
-    }
-
-    .contact-info a {
-      color: #38bdf8;
-      text-decoration: none;
-    }
-
-    footer {
-      text-align: center;
-      padding: 30px;
-      font-size: 14px;
-      border-top: 1px solid rgba(255,255,255,0.1);
-      color: #94a3b8;
-    }
-
-    /* 🌞 Light mode adjustments */
-    body.light-mode .card {
-      background: #ffffff;
-      color: #0f172a;
-    }
-
-    body.light-mode .card a {
-      color: #0284c7;
+    /* mobile menu (simple) */
+    .mobile-menu { display:none; background:rgba(6,10,15,0.85); padding:12px; border-bottom:1px solid rgba(255,255,255,0.03); }
+    .mobile-menu a { display:block; padding:10px 14px; color:#e6eef8; text-decoration:none; border-radius:8px; margin:6px 0; }
+    .mobile-menu a:hover { background: rgba(125,211,252,0.09); color:#7dd3fc; }
+    @media (max-width:900px){
+      .mobile-menu.show { display:block; }
+      .wrap { padding:0 12px; }
+      header { margin-top:8px; border-radius:0; }
     }
   </style>
 </head>
-
 <body>
-  <!-- Navbar -->
-  <nav class="navbar">
+
+  <!-- NAVBAR -->
+  <nav class="navbar" role="navigation" aria-label="Main">
     <div class="nav-wrap">
       <a class="logo" href="#home">
         <div class="logo-badge">mo</div>
@@ -227,104 +152,188 @@
         </div>
       </a>
 
-      <div class="nav-links">
+      <div class="nav-links" aria-hidden="false">
         <a href="#home">Home</a>
         <a href="#about">About</a>
+        <a href="#skills">Skills</a>
         <a href="#projects">Projects</a>
         <a href="#contact">Contact</a>
       </div>
 
-      <!-- 🌗 زر الوضع الليلي والفاتح -->
-      <button id="themeToggle" class="theme-toggle" aria-label="Toggle Dark/Light Mode">🌙</button>
+      <button class="menu-btn" aria-expanded="false" aria-label="Toggle menu" onclick="toggleMenu()">☰</button>
+    </div>
+
+    <div id="mobileMenu" class="mobile-menu" aria-hidden="true">
+      <a href="#home" onclick="toggleMenu()">Home</a>
+      <a href="#about" onclick="toggleMenu()">About</a>
+      <a href="#skills" onclick="toggleMenu()">Skills</a>
+      <a href="#projects" onclick="toggleMenu()">Projects</a>
+      <a href="#contact" onclick="toggleMenu()">Contact</a>
     </div>
   </nav>
 
-  <!-- Header -->
-  <header id="home">
-    <img src="https://media.licdn.com/dms/image/v2/D4D03AQHnfycC3Zfinw/profile-displayphoto-crop_800_800/B4DZmrA.jCGQAM-/0/1759510788662?e=1763596800&v=beta&t=rKC4FFoA7nTid9ncHL6GwfjXwaehrMnQ1a8vcNcM_AI" alt="Mohamed Ashraf Gad">
-    <h1>Mohamed Ashraf Gad</h1>
-    <p>Data Analyst | Transforming Data into Actionable Insights 📊  
-       Skilled in Python, Power BI, and SQL — Turning raw data into meaningful stories.</p>
-  </header>
+  <div class="wrap" id="home">
 
-  <!-- About -->
-  <section id="about">
-    <h2>🧠 About Me</h2>
-    <p>
-      I'm a passionate <strong>Data Analyst</strong> with hands-on experience building dashboards, cleaning & transforming data, 
-      and delivering insights to stakeholders across healthcare, F&B, real estate & banking domains.  
-      Always eager to explore how data can solve real-world problems and support smarter decisions.
-    </p>
-  </section>
+    <!-- Header -->
+    <header>
+      <img class="profile-img"
+           src="https://media.licdn.com/dms/image/v2/D4D03AQHnfycC3Zfinw/profile-displayphoto-crop_800_800/B4DZmrA.jCGQAM-/0/1759510788662?e=1763596800&v=beta&t=rKC4FFoA7nTid9ncHL6GwfjXwaehrMnQ1a8vcNcM_AI"
+           alt="Mohamed Ashraf Gad">
+      <h1>Mohamed Ashraf Gad</h1>
+      <p>Data Analyst — transforming raw data into actionable insights. Skilled in Power BI, Python (Pandas, Plotly), SQL, Excel, Looker and dashboard storytelling.</p>
+    </header>
 
-  <!-- Projects -->
-  <section id="projects">
-    <h2>📊 Featured Projects</h2>
-    <div class="projects">
-      <div class="card">
-        <img src="https://media.licdn.com/dms/image/v2/D4D22AQGlee_PZut-AQ/feedshare-shrink_1280/B4DZnTZxyfGgAw-/0/1760188374946?e=1762387200&v=beta&t=s2oDV-rcHLJbearRyrdMkXTBLnU_TJ1nRgwBO2wdElc" alt="Hospital Dashboard">
-        <h3>🏥 Hospital Performance Dashboard</h3>
-        <p>A Power BI dashboard analyzing hospital KPIs — patient flow, satisfaction, and department efficiency.</p>
-        <a href="https://github.com/mohamedgad300/Hospital-Analyze-Dashboard" target="_blank">🔗 View Project</a>
+    <!-- Quick Actions -->
+<div class="quick-actions" style="text-align:center; margin-top:18px; display:flex; gap:14px; justify-content:center; flex-wrap:wrap;">
+  <!-- WhatsApp -->
+  <a href="https://wa.me/201096454566" target="_blank" rel="noopener"
+     style="display:inline-flex; align-items:center; gap:8px; background:#25D366; color:#021224;
+            padding:10px 16px; border-radius:10px; text-decoration:none; font-weight:700;
+            transition:all .2s ease;">
+    💬 Chat on WhatsApp
+  </a>
+
+  <!-- LinkedIn -->
+  <a href="https://www.linkedin.com/in/mohammed-ashraf-749015226/" target="_blank" rel="noopener"
+     style="display:inline-flex; align-items:center; gap:8px; background:#0A66C2; color:white;
+            padding:10px 16px; border-radius:10px; text-decoration:none; font-weight:700;
+            transition:all .2s ease;">
+    🔗 Connect on LinkedIn
+  </a>
+</div>
+
+<!-- About -->
+<section id="about">
+  <h2>🧠 About Me</h2>
+  <p style="max-width:940px; color:#cbd5e1;">
+    I'm a dedicated <strong>Data Analyst</strong> with a strong passion for transforming raw data into meaningful insights that drive informed decisions.  
+    I specialize in data cleaning, visualization, and storytelling — turning complex information into clear, actionable narratives.  
+    My approach combines analytical thinking with creative presentation to deliver dashboards and reports that truly make an impact.  
+    I believe data is more than numbers — it's a language that, when understood, can shape smarter strategies and better outcomes.
+  </p>
+</section>
+
+    <!-- Skills -->
+    <section id="skills">
+      <h2>⚙️ My Skills</h2>
+      <div class="skills" style="margin-top:12px;">
+        <div class="skill-card">
+          <h3>Technical</h3>
+          <ul>
+            <li>Power BI & dashboard design</li>
+            <li>Python (Pandas, NumPy, Plotly)</li>
+            <li>SQL, Data Modeling & ETL</li>
+            <li>Excel / Power Query</li>
+          </ul>
+        </div>
+        <div class="skill-card">
+          <h3>Soft Skills</h3>
+          <ul>
+            <li>Analytical thinking & problem solving</li>
+            <li>Communication & stakeholder storytelling</li>
+            <li>Attention to detail & data quality</li>
+            <li>Teamwork & project organization</li>
+          </ul>
+        </div>
       </div>
+    </section>
 
-      <div class="card">
-        <img src="https://media.licdn.com/dms/image/v2/D4D22AQHpsTTszVXb3Q/feedshare-shrink_2048_1536/B4DZltFFQsJAAw-/0/1758471677865?e=1762387200&v=beta&t=0gbAPrJa0MIhluYKTC-S4Mr4Tfl42ISNjcFFKaEkwfY" alt="Restaurant Dashboard">
-        <h3>🍽️ Restaurant Dashboard Analyze</h3>
-        <p>Interactive dashboard visualizing restaurant sales, top products, and profit trends using Python and Plotly.</p>
-        <a href="https://github.com/mohamedgad300/Restaurant-Dashboard-Analyze" target="_blank">🔗 View Project</a>
+    <!-- Projects -->
+    <section id="projects">
+      <h2>📊 Featured Projects</h2>
+      <div class="projects" style="margin-top:12px;">
+
+        <!-- 1 -->
+        <article class="project">
+          <img class="project-thumb" alt="Hospital Performance Dashboard"
+               src="https://media.licdn.com/dms/image/v2/D4D22AQGlee_PZut-AQ/feedshare-shrink_1280/B4DZnTZxyfGgAw-/0/1760188374946?e=1762387200&v=beta&t=s2oDV-rcHLJbearRyrdMkXTBLnU_TJ1nRgwBO2wdElc">
+          <div class="project-body">
+            <h3>🏥 Hospital Performance Dashboard</h3>
+            <p>Power BI dashboard measuring hospital KPIs: patient flow, wait times, department utilization and satisfaction — designed to guide operational improvements and resource allocation.</p>
+            <a class="button" href="https://github.com/mohamedgad300/Hospital-Analyze-Dashboard" target="_blank" rel="noopener">🔗 View Project</a>
+          </div>
+        </article>
+
+        <!-- 2 -->
+        <article class="project">
+          <img class="project-thumb" alt="Restaurant Dashboard Analyze"
+               src="https://media.licdn.com/dms/image/v2/D4D22AQHpsTTszVXb3Q/feedshare-shrink_2048_1536/B4DZltFFQsJAAw-/0/1758471677865?e=1762387200&v=beta&t=0gbAPrJa0MIhluYKTC-S4Mr4Tfl42ISNjcFFKaEkwfY">
+          <div class="project-body">
+            <h3>🍽️ Restaurant Dashboard Analyze</h3>
+            <p>Interactive sales & product analysis using Python & Plotly — highlights best-sellers, hourly/daily trends and profit drivers to improve menu & operations.</p>
+            <a class="button" href="https://github.com/mohamedgad300/Restaurant-Dashboard-Analyze" target="_blank" rel="noopener">🔗 View Project</a>
+          </div>
+        </article>
+
+        <!-- 3 -->
+        <article class="project">
+          <img class="project-thumb" alt="ACC Real Estate Dashboard"
+               src="https://media.licdn.com/dms/image/v2/D4D22AQFAkwnAUg83lg/feedshare-shrink_2048_1536/B4DZk_0rDwHYAw-/0/1757712398183?e=1762387200&v=beta&t=sBCA8aQXRgIPUPwm1Sv_sMxX7wDSoSpOZEGmVkLd1KA">
+          <div class="project-body">
+            <h3>🏢 ACC Real Estate Dashboard</h3>
+            <p>Power BI analytics for real estate: property performance, revenue tracking, and portfolio insights — enables data-driven pricing and sales strategies.</p>
+            <a class="button" href="https://github.com/mohamedgad300/ACC-Real-Estate-Dashboard" target="_blank" rel="noopener">🔗 View Project</a>
+          </div>
+        </article>
+
+        <!-- 4 -->
+        <article class="project">
+          <img class="project-thumb" alt="Egyptian Bank Analysis"
+               src="https://media.licdn.com/dms/image/v2/D4D22AQEpFF-5Jj6ZbQ/feedshare-shrink_2048_1536/B4DZkLTm8EIcAw-/0/1756831316754?e=1762387200&v=beta&t=r3dlM6meG0lFKasgiBH_Cuf2i1qEMy8xyQhPpE7rLWQ">
+          <div class="project-body">
+            <h3>🏦 Egyptian Bank Analysis</h3>
+            <p>Banking analytics project using Power BI — customer segmentation, loan & deposit KPIs and dashboard visualizations for strategic decisions.</p>
+            <a class="button" href="https://github.com/mohamedgad300/Egyptian-Bank" target="_blank" rel="noopener">🔗 View Project</a>
+          </div>
+        </article>
+
       </div>
-
-      <div class="card">
-        <img src="https://media.licdn.com/dms/image/v2/D4D22AQFAkwnAUg83lg/feedshare-shrink_2048_1536/B4DZk_0rDwHYAw-/0/1757712398183?e=1762387200&v=beta&t=sBCA8aQXRgIPUPwm1Sv_sMxX7wDSoSpOZEGmVkLd1KA" alt="Real Estate Dashboard">
-        <h3>🏢 ACC Real Estate Dashboard</h3>
-        <p>Power BI analytics dashboard for real estate data — focuses on property performance and revenue tracking.</p>
-        <a href="https://github.com/mohamedgad300/ACC-Real-Estate-Dashboard" target="_blank">🔗 View Project</a>
+    </section>
+    
+    <!-- Mission & Vision -->
+    <section id="mission">
+      <h2>🎯 My Mission & Vision</h2>
+      <div style="max-width:940px; color:#cbd5e1; margin-top:12px;">
+        <p><strong>My Mission:</strong> To empower individuals and organizations to make smarter, data-driven decisions by transforming raw data into actionable insights that lead to measurable growth and innovation.</p>
+        <p><strong>My Vision:</strong> To become a leading data professional who bridges the gap between analytics and strategy — inspiring a culture where every decision is guided by clarity, accuracy, and purpose.</p>
       </div>
-
-      <div class="card">
-        <img src="https://media.licdn.com/dms/image/v2/D4D22AQEpFF-5Jj6ZbQ/feedshare-shrink_2048_1536/B4DZkLTm8EIcAw-/0/1756831316754?e=1762387200&v=beta&t=r3dlM6meG0lFKasgiBH_Cuf2i1qEMy8xyQhPpE7rLWQ" alt="Bank Dashboard">
-        <h3>🏦 Egyptian Bank Analysis</h3>
-        <p>Bank performance analysis dashboard using Power BI — includes KPIs and customer segmentation visualizations.</p>
-        <a href="https://github.com/mohamedgad300/Egyptian-Bank" target="_blank">🔗 View Project</a>
+    </section>
+    
+    <!-- Contact -->
+    <section id="contact">
+      <h2>📫 Connect With Me</h2>
+      <div style="height:12px"></div>
+      <div class="contact">
+        <a href="https://www.linkedin.com/in/mohammed-ashraf-749015226/" target="_blank" rel="noopener">💼 LinkedIn</a>
+        <a href="mailto:mohamedashrwf@gmail.com">📧 Email</a>
+        <a href="https://wa.me/201096454566" target="_blank" rel="noopener">💬 WhatsApp</a>
+        <a href="tel:+201096454566">📞 Call</a>
+        <a href="https://www.facebook.com/mohamed.ashraf.gad.59169?locale=ar_AR" target="_blank" rel="noopener">📘 Facebook</a>
+        <a href="https://www.instagram.com/mga8d/?hl=ar" target="_blank" rel="noopener">📸 Instagram</a>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Contact -->
-  <section id="contact">
-    <h2>📬 Contact</h2>
-    <div class="contact-info">
-      <p>Email: <a href="mailto:mohamedashrwf@gmail.com">mohamedashrwf@gmail.com</a></p>
-      <p>LinkedIn: <a href="https://www.linkedin.com/in/mohamed-ashraf-gad/">mohamed-ashraf-gad</a></p>
-      <p>Facebook: <a href="https://www.facebook.com/mohamed.ashraf.gad.59169?locale=ar_AR">mohamed.ashraf.gad</a></p>
-    </div>
-  </section>
+    <footer>
+      © 2025 Mohamed Ashraf Gad — Turning Data into Insights
+    </footer>
 
-  <footer>© 2025 Mohamed Ashraf Gad | All Rights Reserved.</footer>
+  </div>
 
   <script>
-    // 🌗 Toggle Dark & Light mode with memory
-    const themeToggle = document.getElementById("themeToggle");
-    const currentTheme = localStorage.getItem("theme");
-
-    if (currentTheme === "light") {
-      document.body.classList.add("light-mode");
-      themeToggle.textContent = "☀️";
-    } else {
-      themeToggle.textContent = "🌙";
-    }
-
-    themeToggle.addEventListener("click", () => {
-      document.body.classList.toggle("light-mode");
-      if (document.body.classList.contains("light-mode")) {
-        localStorage.setItem("theme", "light");
-        themeToggle.textContent = "☀️";
+    function toggleMenu() {
+      const menu = document.getElementById('mobileMenu');
+      const btn = document.querySelector('.menu-btn');
+      if (!menu.classList.contains('show')) {
+        menu.classList.add('show');
+        btn.setAttribute('aria-expanded','true');
+        menu.setAttribute('aria-hidden','false');
       } else {
-        localStorage.setItem("theme", "dark");
-        themeToggle.textContent = "🌙";
+        menu.classList.remove('show');
+        btn.setAttribute('aria-expanded','false');
+        menu.setAttribute('aria-hidden','true');
       }
-    });
+    }
   </script>
+
 </body>
 </html>
