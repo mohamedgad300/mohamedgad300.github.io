@@ -2,276 +2,167 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Mohamed Ashraf Gad — Data Analyst</title>
-  <meta name="description" content="Portfolio of Mohamed Ashraf Gad — Data Analyst skilled in Power BI, SQL, Python, and dashboard design. Transforming data into actionable business insights." />
-  <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/1828/1828884.png" />
 
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Pacifico&display=swap" rel="stylesheet">
 
   <style>
-    * { box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       margin: 0;
-      font-family: 'Poppins', system-ui, Arial, sans-serif;
-      background: #0f172a;
-      color: #e2e8f0;
-      -webkit-font-smoothing: antialiased;
-      line-height: 1.6;
-    }
-
-    /* Navbar */
-    .navbar {
-      position: sticky;
-      top: 0;
-      z-index: 50;
-      backdrop-filter: blur(6px);
-      background: rgba(6,10,15,0.55);
-      border-bottom: 1px solid rgba(255,255,255,0.03);
-    }
-    .nav-wrap {
-      max-width: 1100px;
-      margin: 0 auto;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 12px 18px;
-    }
-    .logo {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      text-decoration: none;
+      font-family: 'Poppins', sans-serif;
+      background-color: #0f172a;
       color: #e2e8f0;
     }
-    .logo-badge {
-      width: 42px; height: 42px;
-      display: flex; align-items: center; justify-content: center;
-      border-radius: 8px;
-      background: linear-gradient(135deg, #38bdf8, #7dd3fc);
-      color: #021224;
-      font-weight: 700;
-      font-family: 'Pacifico', cursive;
-      font-size: 20px;
-      box-shadow: 0 6px 20px rgba(56,189,248,0.12);
-    }
-    .logo-text { font-weight: 700; font-size: 18px; }
 
-    .nav-links {
-      display: flex;
-      gap: 14px;
-      align-items: center;
+    h1, h2, h3 {
+      color: #38bdf8;
     }
-    .nav-links a {
-      color: #cfefff;
+
+    a {
+      color: #38bdf8;
       text-decoration: none;
-      padding: 8px 10px;
-      border-radius: 8px;
-      font-weight: 600;
-      transition: background .18s, color .18s, transform .12s;
     }
-    .nav-links a:hover {
-      background: rgba(125,211,252,0.09);
-      color: #7dd3fc;
-      transform: translateY(-2px);
-    }
-
-    .menu-btn { display: none; background: transparent; border: 0; color: #e2e8f0; font-size: 20px; }
-
-    /* Layout */
-    .wrap { max-width: 1100px; margin: 0 auto; padding: 18px; }
 
     header {
       text-align: center;
-      padding: 42px 18px;
-      margin-top: 12px;
-      background: linear-gradient(180deg, #0b1220, #0f172a);
-      border-radius: 12px;
+      padding: 40px 20px;
     }
-    .profile-img {
-      width: 220px;
-      height: 220px;
+
+    header img {
+      width: 180px;
+      height: 180px;
       border-radius: 50%;
-      object-fit: cover;
       border: 4px solid #38bdf8;
-      box-shadow: 0 14px 40px rgba(56,189,248,0.10);
-      display: block;
-      margin: 0 auto 18px;
-    }
-    header h1 { color: #38bdf8; margin: 6px 0; font-size: 2rem; }
-    header p { color: #cbd5e1; max-width: 760px; margin: 0 auto; }
-
-    h2 {
-      display: inline-block;
-      color: #38bdf8;
-      border-bottom: 2px solid #38bdf8;
-      padding-bottom: 6px;
-      margin-bottom: 18px;
+      box-shadow: 0 0 25px rgba(56, 189, 248, 0.3);
     }
 
-    /* Skills */
-    .skills { display: flex; gap: 18px; flex-wrap: wrap; }
-    .skill-card {
-      background: #0b1220;
-      padding: 18px;
-      border-radius: 10px;
-      flex: 1 1 300px;
-      box-shadow: 0 6px 18px rgba(2,6,23,0.6);
+    header h1 {
+      font-size: 2em;
+      margin-top: 15px;
     }
-    .skill-card h3 { color: #7dd3fc; margin-bottom: 8px; }
 
-    /* Projects */
+    header p {
+      font-size: 1.1em;
+      color: #cbd5e1;
+    }
+
+    section {
+      padding: 20px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
     .projects {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 20px;
     }
+
     .project {
-      background: linear-gradient(180deg, #0d1724, #0f1b2a);
+      background-color: #1e293b;
       border-radius: 12px;
       overflow: hidden;
-      transition: transform .28s ease, box-shadow .28s ease;
-      display: flex;
-      flex-direction: column;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+      transition: transform 0.3s ease;
     }
-    .project:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 18px 40px rgba(2,6,23,0.6);
-    }
-    .project-thumb {
-      width: 100%; height: 170px;
-      object-fit: cover;
-      transition: transform .4s ease;
-    }
-    .project:hover .project-thumb { transform: scale(1.05); }
-    .project-body { padding: 16px; display: flex; flex-direction: column; flex: 1; }
-    .project h3 { color: #7dd3fc; margin-bottom: 8px; }
-    .project p { color: #cbd5e1; flex: 1; margin-bottom: 12px; }
-    .project a.button {
-      background: #38bdf8; color: #071226;
-      padding: 8px 12px; border-radius: 8px; font-weight: 700;
-      text-decoration: none; text-align: center;
-    }
-    .project a.button:hover { background: #7dd3fc; }
 
-    /* Contact */
-    .contact {
-      background: #0d1724;
-      padding: 18px;
-      border-radius: 12px;
-      text-align: center;
-      display: flex;
-      gap: 12px;
-      align-items: center;
-      justify-content: center;
-      flex-wrap: wrap;
+    .project:hover {
+      transform: translateY(-5px);
     }
-    .contact a {
-      display: inline-flex;
-      gap: 8px;
-      align-items: center;
-      padding: 10px 14px;
-      background: #0f2430;
-      color: #e6eef8;
-      border-radius: 10px;
-      text-decoration: none;
-      font-weight: 700;
-      transition: all .18s ease;
+
+    .project-thumb {
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
     }
-    .contact a:hover { background: #38bdf8; color: #071226; transform: translateY(-3px); }
+
+    .project-body {
+      padding: 15px;
+    }
+
+    .project-body h3 {
+      margin-top: 0;
+      margin-bottom: 10px;
+      font-size: 1.2em;
+    }
+
+    .project-body p {
+      font-size: 0.95em;
+      color: #cbd5e1;
+      margin-bottom: 15px;
+    }
+
+    .button {
+      display: inline-block;
+      background-color: #38bdf8;
+      color: #0f172a;
+      padding: 8px 12px;
+      border-radius: 8px;
+      font-weight: 600;
+      transition: background 0.3s ease;
+    }
+
+    .button:hover {
+      background-color: #7dd3fc;
+    }
 
     footer {
       text-align: center;
+      padding: 20px;
       color: #94a3b8;
-      font-size: .92rem;
-      margin: 36px 0 12px;
-    }
-
-    /* Responsive */
-    @media (max-width:900px) {
-      .nav-links { display: none; }
-      .menu-btn { display: inline-block; }
-      .mobile-menu.show { display: block; }
+      font-size: 0.9em;
     }
   </style>
 </head>
 
 <body>
-  <!-- NAVBAR -->
-  <nav class="navbar">
-    <div class="nav-wrap">
-      <a class="logo" href="#home">
-        <div class="logo-badge">mo</div>
-        <div>
-          <div class="logo-text">mogaad</div>
-          <div style="font-size:11px;color:#9fbcd6;margin-top:-4px;">Data Analyst</div>
+  <!-- HEADER -->
+  <header>
+    <img src="https://media.licdn.com/dms/image/v2/D4D03AQHnfycC3Zfinw/profile-displayphoto-crop_800_800/B4DZmrA.jCGQAM-/0/1759510788662?e=1763596800&v=beta&t=rKC4FFoA7nTid9ncHL6GwfjXwaehrMnQ1a8vcNcM_AI" alt="Mohamed Ashraf Gad">
+    <h1>Mohamed Ashraf Gad</h1>
+    <p>Data Analyst | Power BI | Python | SQL | Excel | Transforming Data into Actionable Insights</p>
+  </header>
+
+  <!-- PROJECTS SECTION -->
+  <section id="projects">
+    <h2>📊 Featured Projects</h2>
+
+    <div class="projects">
+
+      <!-- 1 -->
+      <article class="project">
+        <img class="project-thumb" alt="Hospital Performance Dashboard"
+             src="https://media.licdn.com/dms/image/v2/D4D22AQGlee_PZut-AQ/feedshare-shrink_1280/B4DZnTZxyfGgAw-/0/1760188374946?e=1762387200&v=beta&t=s2oDV-rcHLJbearRyrdMkXTBLnU_TJ1nRgwBO2wdElc">
+        <div class="project-body">
+          <h3>🏥 Hospital Performance Dashboard</h3>
+          <p>Power BI dashboard measuring hospital KPIs: patient flow, wait times, department utilization and satisfaction — designed to guide operational improvements and resource allocation.</p>
+          <a class="button" href="https://github.com/mohamedgad300/Hospital-Analyze-Dashboard" target="_blank" rel="noopener">🔗 View Project</a>
         </div>
-      </a>
+      </article>
 
-      <div class="nav-links">
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#skills">Skills</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
-      </div>
+      <!-- 2 -->
+      <article class="project">
+        <img class="project-thumb" alt="Sales Analytics Dashboard"
+             src="https://media.licdn.com/dms/image/v2/D4D22AQHbq8qCibrF1Q/feedshare-shrink_1280/B4DZocj_0hGkAs-/0/1761415791383?e=1762992000&v=beta&t=C2BABgHzVkz-ToFavwe3LYG065iFkbE9KXXG-W-io58">
+        <div class="project-body">
+          <h3>📈 Sales Analytics Dashboard</h3>
+          <p>Comprehensive sales performance analysis dashboard built with SQL, Python, and Power BI — tracking KPIs like Total Sales, Profit Margin, Orders, and Customer Insights across regions and categories.</p>
+          <a class="button" href="https://github.com/mohamedgad300/Sales_Dashboard" target="_blank" rel="noopener">🔗 View Project</a>
+        </div>
+      </article>
 
-      <button class="menu-btn" onclick="toggleMenu()">☰</button>
     </div>
-    <div id="mobileMenu" class="mobile-menu" style="display:none;">
-      <a href="#home" onclick="toggleMenu()">Home</a>
-      <a href="#about" onclick="toggleMenu()">About</a>
-      <a href="#skills" onclick="toggleMenu()">Skills</a>
-      <a href="#projects" onclick="toggleMenu()">Projects</a>
-      <a href="#contact" onclick="toggleMenu()">Contact</a>
-    </div>
-  </nav>
+  </section>
 
-  <div class="wrap" id="home">
-    <!-- Header -->
-    <header>
-      <img class="profile-img" src="https://media.licdn.com/dms/image/v2/D4D03AQHnfycC3Zfinw/profile-displayphoto-crop_800_800/B4DZmrA.jCGQAM-/0/1759510788662?e=1763596800&v=beta&t=rKC4FFoA7nTid9ncHL6GwfjXwaehrMnQ1a8vcNcM_AI" alt="Mohamed Ashraf Gad">
-      <h1>Mohamed Ashraf Gad</h1>
-      <p>Data Analyst — transforming raw data into actionable insights using Power BI, Python (Pandas, Plotly), SQL, and Excel dashboards.</p>
-    </header>
-
-    <!-- Projects -->
-    <section id="projects">
-      <h2>📊 Featured Projects</h2>
-      <div class="projects">
-        <!-- Sales Dashboard -->
-        <article class="project">
-          <img class="project-thumb" alt="Sales Analytics Dashboard"
-               src="https://media.licdn.com/dms/image/v2/D4D22AQHbq8qCibrF1Q/feedshare-shrink_1280/B4DZocj_0hGkAs-/0/1761415791383?e=1762992000&v=beta&t=C2BABgHzVkz-ToFavwe3LYG065iFkbE9KXXG-W-io58">
-          <div class="project-body">
-            <h3>📈 Sales Analytics Dashboard</h3>
-            <p>A complete BI dashboard built with <strong>SQL, Python, and Power BI</strong> — analyzing sales, profit, customers, and operations across multiple regions and categories.</p>
-            <a class="button" href="https://github.com/mohamedgad300/Sales_Dashboard" target="_blank" rel="noopener">🔗 View Project</a>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <!-- Contact -->
-    <section id="contact">
-      <h2>📫 Connect With Me</h2>
-      <div class="contact">
-        <a href="mailto:mohamedashrwf@gmail.com">📧 Email</a>
-        <a href="https://wa.me/201096454566" target="_blank">💬 WhatsApp</a>
-        <a href="https://www.linkedin.com/in/mohammed-ashraf-749015226/" target="_blank">💼 LinkedIn</a>
-      </div>
-    </section>
-
-    <footer>© 2025 Mohamed Ashraf Gad — Turning Data into Insights</footer>
-  </div>
-
-  <script>
-    function toggleMenu() {
-      const menu = document.getElementById('mobileMenu');
-      menu.style.display = (menu.style.display === 'block') ? 'none' : 'block';
-    }
-  </script>
+  <!-- FOOTER -->
+  <footer>
+    © 2025 Mohamed Ashraf Gad — Turning Data into Insights
+  </footer>
 </body>
 </html>
