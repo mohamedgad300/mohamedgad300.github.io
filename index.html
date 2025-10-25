@@ -55,10 +55,13 @@
     }
     .nav-links a:hover { background: rgba(125,211,252,0.09); color:#7dd3fc; transform:translateY(-2px); }
 
+    /* Mobile menu button */
     .menu-btn { display:none; background:transparent; border:0; color:#e2e8f0; font-size:20px; }
 
+    /* Layout wrapper */
     .wrap { max-width:1100px; margin:0 auto; padding:18px; }
 
+    /* Header */
     header {
       text-align:center; padding:42px 18px; margin-top:12px;
       background: linear-gradient(180deg,#0b1220,#0f172a);
@@ -78,6 +81,7 @@
       padding-bottom:6px; margin-bottom:18px; font-size:1.05rem;
     }
 
+    /* Skills */
     .skills {
       display:flex; gap:18px; flex-wrap:wrap;
     }
@@ -88,6 +92,7 @@
     .skill-card h3 { color:#7dd3fc; margin:0 0 8px; }
     .skill-card ul { margin:0; padding-left:18px; color:#cbd5e1; }
 
+    /* Projects */
     .projects {
       display:grid; grid-template-columns: repeat(auto-fit,minmax(260px,1fr)); gap:20px;
       margin-top:12px;
@@ -105,6 +110,7 @@
     .project a.button { display:inline-block; margin-top:auto; text-decoration:none; background:#38bdf8; color:#071226; padding:8px 12px; border-radius:8px; font-weight:700; }
     .project a.button:hover { background:#7dd3fc; }
 
+    /* Contact */
     .contact {
       background:#0d1724; padding:18px; border-radius:12px; text-align:center;
       display:flex; gap:12px; align-items:center; justify-content:center; flex-wrap:wrap;
@@ -117,6 +123,7 @@
 
     footer { text-align:center; color:#94a3b8; font-size:.92rem; margin:36px 0 12px; }
 
+    /* Responsive */
     @media (max-width:900px) {
       .nav-links { display:none; }
       .menu-btn { display:inline-block; }
@@ -131,10 +138,9 @@
     }
   </style>
 </head>
-
 <body>
   <!-- NAVBAR -->
-  <nav class="navbar">
+  <nav class="navbar" role="navigation">
     <div class="nav-wrap">
       <a class="logo" href="#home">
         <div class="logo-badge">mo</div>
@@ -162,29 +168,26 @@
   </nav>
 
   <div class="wrap" id="home">
-
     <!-- Header -->
     <header>
-      <img class="profile-img"
-           src="https://media.licdn.com/dms/image/v2/D4D03AQHnfycC3Zfinw/profile-displayphoto-crop_800_800/B4DZmrA.jCGQAM-/0/1759510788662?e=1763596800&v=beta&t=rKC4FFoA7nTid9ncHL6GwfjXwaehrMnQ1a8vcNcM_AI"
-           alt="Mohamed Ashraf Gad">
+      <img class="profile-img" src="https://media.licdn.com/dms/image/v2/D4D03AQHnfycC3Zfinw/profile-displayphoto-crop_800_800/B4DZmrA.jCGQAM-/0/1759510788662?e=1763596800&v=beta&t=rKC4FFoA7nTid9ncHL6GwfjXwaehrMnQ1a8vcNcM_AI" alt="Mohamed Ashraf Gad">
       <h1>Mohamed Ashraf Gad</h1>
       <p>Data Analyst — transforming raw data into actionable insights. Skilled in Power BI, Python (Pandas, Plotly), SQL, Excel, Looker and dashboard storytelling.</p>
     </header>
 
     <!-- Quick Actions -->
-    <div style="text-align:center; margin-top:18px; display:flex; gap:14px; justify-content:center; flex-wrap:wrap;">
-      <a href="https://wa.me/201096454566" target="_blank" rel="noopener" style="background:#25D366;color:#021224;padding:10px 16px;border-radius:10px;text-decoration:none;font-weight:700;">💬 Chat on WhatsApp</a>
-      <a href="https://www.linkedin.com/in/mohammed-ashraf-749015226/" target="_blank" rel="noopener" style="background:#0A66C2;color:white;padding:10px 16px;border-radius:10px;text-decoration:none;font-weight:700;">🔗 Connect on LinkedIn</a>
+    <div class="quick-actions" style="text-align:center; margin-top:18px; display:flex; gap:14px; justify-content:center; flex-wrap:wrap;">
+      <a href="https://wa.me/201096454566" target="_blank" rel="noopener" style="background:#25D366; color:#021224; padding:10px 16px; border-radius:10px; text-decoration:none; font-weight:700;">💬 Chat on WhatsApp</a>
+      <a href="https://www.linkedin.com/in/mohammed-ashraf-749015226/" target="_blank" rel="noopener" style="background:#0A66C2; color:white; padding:10px 16px; border-radius:10px; text-decoration:none; font-weight:700;">🔗 Connect on LinkedIn</a>
     </div>
 
     <!-- About -->
     <section id="about">
       <h2>🧠 About Me</h2>
       <p style="max-width:940px; color:#cbd5e1;">
-        I'm a dedicated <strong>Data Analyst</strong> with a strong passion for transforming raw data into meaningful insights that drive informed decisions.
-        I specialize in data cleaning, visualization, and storytelling — turning complex information into clear, actionable narratives.
-        My approach combines analytical thinking with creative presentation to deliver dashboards and reports that truly make an impact.
+        I'm a dedicated <strong>Data Analyst</strong> with a strong passion for transforming raw data into meaningful insights that drive informed decisions.  
+        I specialize in data cleaning, visualization, and storytelling — turning complex information into clear, actionable narratives.  
+        My approach combines analytical thinking with creative presentation to deliver dashboards and reports that truly make an impact.  
       </p>
     </section>
 
@@ -204,10 +207,10 @@
         <div class="skill-card">
           <h3>Soft Skills</h3>
           <ul>
-            <li>Analytical thinking</li>
+            <li>Analytical thinking & problem solving</li>
             <li>Communication & storytelling</li>
-            <li>Attention to detail</li>
-            <li>Teamwork</li>
+            <li>Attention to detail & data quality</li>
+            <li>Teamwork & organization</li>
           </ul>
         </div>
       </div>
@@ -217,103 +220,103 @@
     <section id="projects">
       <h2>📊 Featured Projects</h2>
       <div class="projects">
-        
-        <!-- 🆕 Sales Dashboard -->
+        <!-- Sales Dashboard -->
         <article class="project">
-          <img class="project-thumb" alt="Sales Analytics Dashboard"
-               src="https://media.licdn.com/dms/image/v2/D4D22AQHbq8qCibrF1Q/feedshare-shrink_1280/B4DZocj_0hGkAs-/0/1761415791383?e=1762992000&v=beta&t=C2BABgHzVkz-ToFavwe3LYG065iFkbE9KXXG-W-io58">
+          <img class="project-thumb" alt="Sales Analytics Dashboard" src="https://media.licdn.com/dms/image/v2/D4D22AQHbq8qCibrF1Q/feedshare-shrink_1280/B4DZocj_0hGkAs-/0/1761415791383?e=1762992000&v=beta&t=C2BABgHzVkz-ToFavwe3LYG065iFkbE9KXXG-W-io58">
           <div class="project-body">
             <h3>📈 Sales Analytics Dashboard</h3>
-            <p>
-              A Power BI dashboard analyzing company sales, profit, and customer behavior across multiple regions and product categories.
-              It transforms raw sales data into strategic insights to improve marketing, inventory, and pricing decisions.
-            </p>
-            <a class="button" href="https://github.com/mohamedgad300/Sales_Dashboard" target="_blank" rel="noopener">🔗 View Project</a>
+            <p>A complete business intelligence dashboard built with <strong>SQL, Python, and Power BI</strong> — analyzing sales, profit, customers, and operations performance across multiple regions and categories.</p>
+            <a class="button" href="https://github.com/mohamedgad300/Sales_Dashboard" target="_blank">🔗 View Project</a>
           </div>
         </article>
 
-        <!-- باقي المشاريع -->
+        <!-- Hospital -->
         <article class="project">
-          <img class="project-thumb" alt="Hospital Performance Dashboard"
-               src="https://media.licdn.com/dms/image/v2/D4D22AQGlee_PZut-AQ/feedshare-shrink_1280/B4DZnTZxyfGgAw-/0/1760188374946?e=1762387200&v=beta&t=s2oDV-rcHLJbearRyrdMkXTBLnU_TJ1nRgwBO2wdElc">
+          <img class="project-thumb" alt="Hospital Performance Dashboard" src="https://media.licdn.com/dms/image/v2/D4D22AQGlee_PZut-AQ/feedshare-shrink_1280/B4DZnTZxyfGgAw-/0/1760188374946?e=1762387200&v=beta&t=s2oDV-rcHLJbearRyrdMkXTBLnU_TJ1nRgwBO2wdElc">
           <div class="project-body">
             <h3>🏥 Hospital Performance Dashboard</h3>
-            <p>Power BI dashboard measuring hospital KPIs: patient flow, wait times, department utilization, and satisfaction.</p>
-            <a class="button" href="https://github.com/mohamedgad300/Hospital-Analyze-Dashboard" target="_blank" rel="noopener">🔗 View Project</a>
+            <p>Power BI dashboard measuring hospital KPIs: patient flow, wait times, department utilization and satisfaction — designed to guide operational improvements and resource allocation.</p>
+            <a class="button" href="https://github.com/mohamedgad300/Hospital-Analyze-Dashboard" target="_blank">🔗 View Project</a>
           </div>
         </article>
 
+        <!-- Restaurant -->
         <article class="project">
-          <img class="project-thumb" alt="Restaurant Dashboard Analyze"
-               src="https://media.licdn.com/dms/image/v2/D4D22AQHpsTTszVXb3Q/feedshare-shrink_2048_1536/B4DZltFFQsJAAw-/0/1758471677865?e=1762387200&v=beta&t=0gbAPrJa0MIhluYKTC-S4Mr4Tfl42ISNjcFFKaEkwfY">
+          <img class="project-thumb" alt="Restaurant Dashboard Analyze" src="https://media.licdn.com/dms/image/v2/D4D22AQHpsTTszVXb3Q/feedshare-shrink_2048_1536/B4DZltFFQsJAAw-/0/1758471677865?e=1762387200&v=beta&t=0gbAPrJa0MIhluYKTC-S4Mr4Tfl42ISNjcFFKaEkwfY">
           <div class="project-body">
             <h3>🍽️ Restaurant Dashboard Analyze</h3>
-            <p>Interactive dashboard using Python & Plotly — analyzing orders, products, and profit trends.</p>
-            <a class="button" href="https://github.com/mohamedgad300/Restaurant-Dashboard-Analyze" target="_blank" rel="noopener">🔗 View Project</a>
+            <p>Interactive sales & product analysis using Python & Plotly — highlights best-sellers, hourly/daily trends and profit drivers to improve menu & operations.</p>
+            <a class="button" href="https://github.com/mohamedgad300/Restaurant-Dashboard-Analyze" target="_blank">🔗 View Project</a>
           </div>
         </article>
 
+        <!-- Real Estate -->
         <article class="project">
-          <img class="project-thumb" alt="ACC Real Estate Dashboard"
-               src="https://media.licdn.com/dms/image/v2/D4D22AQFAkwnAUg83lg/feedshare-shrink_2048_1536/B4DZk_0rDwHYAw-/0/1757712398183?e=1762387200&v=beta&t=sBCA8aQXRgIPUPwm1Sv_sMxX7wDSoSpOZEGmVkLd1KA">
+          <img class="project-thumb" alt="ACC Real Estate Dashboard" src="https://media.licdn.com/dms/image/v2/D4D22AQFAkwnAUg83lg/feedshare-shrink_2048_1536/B4DZk_0rDwHYAw-/0/1757712398183?e=1762387200&v=beta&t=sBCA8aQXRgIPUPwm1Sv_sMxX7wDSoSpOZEGmVkLd1KA">
           <div class="project-body">
             <h3>🏢 ACC Real Estate Dashboard</h3>
-            <p>Real estate Power BI dashboard for tracking property revenue, occupancy, and portfolio growth.</p>
-            <a class="button" href="https://github.com/mohamedgad300/ACC-Real-Estate-Dashboard" target="_blank" rel="noopener">🔗 View Project</a>
+            <p>Power BI analytics for real estate: property performance, revenue tracking, and portfolio insights — enables data-driven pricing and sales strategies.</p>
+            <a class="button" href="https://github.com/mohamedgad300/ACC-Real-Estate-Dashboard" target="_blank">🔗 View Project</a>
           </div>
         </article>
 
+        <!-- Bank -->
         <article class="project">
-          <img class="project-thumb" alt="Egyptian Bank Analysis"
-               src="https://media.licdn.com/dms/image/v2/D4D22AQEpFF-5Jj6ZbQ/feedshare-shrink_2048_1536/B4DZkLTm8EIcAw-/0/1756831316754?e=1762387200&v=beta&t=r3dlM6meG0lFKasgiBH_Cuf2i1qEMy8xyQhPpE7rLWQ">
+          <img class="project-thumb" alt="Egyptian Bank Analysis" src="https://media.licdn.com/dms/image/v2/D4D22AQEpFF-5Jj6ZbQ/feedshare-shrink_2048_1536/B4DZkLTm8EIcAw-/0/1756831316754?e=1762387200&v=beta&t=r3dlM6meG0lFKasgiBH_Cuf2i1qEMy8xyQhPpE7rLWQ">
           <div class="project-body">
             <h3>🏦 Egyptian Bank Analysis</h3>
-            <p>Power BI banking dashboard visualizing loans, deposits, and customer segmentation metrics.</p>
-            <a class="button" href="https://github.com/mohamedgad300/Egyptian-Bank" target="_blank" rel="noopener">🔗 View Project</a>
+            <p>Banking analytics project using Power BI — customer segmentation, loan & deposit KPIs and dashboard visualizations for strategic decisions.</p>
+            <a class="button" href="https://github.com/mohamedgad300/Egyptian-Bank" target="_blank">🔗 View Project</a>
           </div>
         </article>
       </div>
     </section>
 
+    <!-- Mission -->
+    <section id="mission">
+      <h2>🎯 My Mission & Vision</h2>
+      <p style="max-width:940px; color:#cbd5e1;">My mission is to empower individuals and organizations to make smarter, data-driven decisions by transforming raw data into actionable insights that lead to measurable growth.</p>
+    </section>
+
     <!-- Contact -->
-<section id="contact">
-  <h2>📫 Connect With Me</h2>
-  <div class="contact">
-    <a href="https://www.linkedin.com/in/mohammed-ashraf-749015226/" target="_blank" rel="noopener">💼 LinkedIn</a>
-    <a href="mailto:mohamedashrwf@gmail.com">📧 Email</a>
-    <a href="https://wa.me/201096454566" target="_blank" rel="noopener">💬 WhatsApp</a>
-    <a href="tel:+201096454566">📞 Call</a>
-    <a href="https://www.facebook.com/mohamed.ashraf.gad.59169" target="_blank" rel="noopener">🌐 Facebook</a>
-    <a href="https://github.com/mohamedgad300" target="_blank" rel="noopener">💻 GitHub</a>
+    <section id="contact">
+      <h2>📫 Connect With Me</h2>
+      <div class="contact
+            <!-- Contact -->
+    <section id="contact">
+      <h2>📫 Connect With Me</h2>
+      <div style="height:12px"></div>
+      <div class="contact">
+        <a href="https://www.linkedin.com/in/mohammed-ashraf-749015226/" target="_blank" rel="noopener">💼 LinkedIn</a>
+        <a href="mailto:mohamedashrwf@gmail.com">📧 Email</a>
+        <a href="https://wa.me/201096454566" target="_blank" rel="noopener">💬 WhatsApp</a>
+        <a href="tel:+201096454566">📞 Call</a>
+        <a href="https://www.facebook.com/mohamed.ashraf.gad.59169?locale=ar_AR" target="_blank" rel="noopener">📘 Facebook</a>
+        <a href="https://www.instagram.com/mga8d/?hl=ar" target="_blank" rel="noopener">📸 Instagram</a>
+      </div>
+    </section>
+
+    <footer>
+      © 2025 Mohamed Ashraf Gad — Turning Data into Insights
+    </footer>
+
   </div>
-</section>
 
-<!-- Footer -->
-<footer>
-  <p>© 2025 Mohamed Ashraf Gad — UI/UX Designer & Flutter Developer | Data Analyst</p>
-  <p>Built with ❤️ using HTML, CSS, and Power BI Visuals</p>
-</footer>
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById('mobileMenu');
+      const btn = document.querySelector('.menu-btn');
+      if (!menu.classList.contains('show')) {
+        menu.classList.add('show');
+        btn.setAttribute('aria-expanded', 'true');
+        menu.setAttribute('aria-hidden', 'false');
+      } else {
+        menu.classList.remove('show');
+        btn.setAttribute('aria-expanded', 'false');
+        menu.setAttribute('aria-hidden', 'true');
+      }
+    }
+  </script>
 
-<!-- Script -->
-<script>
-  // Toggle menu for mobile view
-  const menuBtn = document.querySelector('.menu-btn');
-  const nav = document.querySelector('nav ul');
-
-  menuBtn.addEventListener('click', () => {
-    nav.classList.toggle('active');
-  });
-
-  // Smooth scroll for anchor links
-  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-      e.preventDefault();
-      document.querySelector(this.getAttribute('href')).scrollIntoView({
-        behavior: 'smooth'
-      });
-    });
-  });
-</script>
 </body>
 </html>
-
